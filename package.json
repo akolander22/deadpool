@@ -1,0 +1,24 @@
+{
+  "name": "deadpool",
+  "version": "1.0.0",
+  "description": "Application which will allow creation of deadpool and keep track of all users points",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akolander22/deadpool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akolander22/deadpool/issues"
+  },
+  "homepage": "https://github.com/akolander22/deadpool#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "express": "^4.14.0"
+  }
+}
