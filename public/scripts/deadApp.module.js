@@ -1,1 +1,1 @@
-angular.module('deadApp', []);
+angular.module('deadApp', ['ngRoute']);
