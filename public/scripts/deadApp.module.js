@@ -1,1 +1,1 @@
-angular.module('deadApp', ['ngRoute']);
+angular.module('deadApp', ['ngRoute', 'ngMaterial']);
