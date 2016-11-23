@@ -15,12 +15,14 @@
     <script src="scripts/deadApp.module.js" charset="utf-8"></script>
     <script src="scripts/deadApp.config.js" charset="utf-8"></script>
     <script src="scripts/MainController.js" charset="utf-8"></script>
+    <script src="scripts/SearchController.js" charset="utf-8"></script>
 
     <base href="/" />
   </head>
   <body ng-controller="MainController">
     <h1>Hiya</h1>
-    <input ng-model="search" />
-    <md-button ng-click="submit()" class="md-primary md-raised">Submit</md-button>
+    <div ng-view>
+
+    </div>
   </body>
 </html>
