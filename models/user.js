@@ -8,9 +8,18 @@ var SALT_WORK_FACTOR = 10;
 
 //establishes user is username and password, required unique username
 var UserSchema = new Schema({
+
+  local : {
    username: { type: String, required: true, index: { unique: true } },
    password: { type: String, required: true },
   //  shows: [show], required: false
+  },
+    google           : {
+        id           : String,
+        token        : String,
+        email        : String,
+        name         : String
+    }
 });
 
 
