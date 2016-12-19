@@ -5,7 +5,20 @@ var mongoose = require('mongoose');
 
 var app = express();
 
+var User = require('./models/user');
+var login = require('./routes/login');
+var register = require('./routes/register');
+var showRouter = require('./routes/show');
+
 app.use(express.static('public'));
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
+app.use('/login', login);
+app.use('/register', register);
 
 
 app.get('/', function(request, response){
