@@ -1,14 +1,14 @@
 var express = require('express');
 var path = require('path');
 var mongoose = require('mongoose');
-
+var passport = require('passport');
+var bodyParser = require('body-parser');
 
 var app = express();
 
 var User = require('./models/user');
 var login = require('./routes/login');
 var register = require('./routes/register');
-var showRouter = require('./routes/show');
 
 app.use(express.static('public'));
 
