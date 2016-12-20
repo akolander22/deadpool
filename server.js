@@ -3,6 +3,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var app = express();
 
@@ -11,6 +12,15 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 
 app.use(express.static('public'));
+
+//session password
+app.use(session({
+  secret: 'whirlypop',
+  key: 'user',
+  resave: true,
+  saveUninitialized: false,
+  cookie: { maxAge: 30 * 60 * 1000, secure: false}
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
