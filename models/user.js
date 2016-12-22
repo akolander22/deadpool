@@ -14,12 +14,12 @@ var UserSchema = new Schema({
    password: { type: String, required: true },
   //  shows: [show], required: false
   },
-    google           : {
+  google           : {
         id           : String,
         token        : String,
         email        : String,
         name         : String
-    }
+  }
 });
 
 

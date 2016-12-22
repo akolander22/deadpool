@@ -5,12 +5,12 @@ var passport = require('passport');
 var User = require('../models/user');
 
 
-router.get('/', function(req, res) {
+router.get('/register', function(req, res) {
 			res.render('register.html', { message: req.flash('loginMessage') });
 		});
 
 // process the signup form
-router.post('/', passport.authenticate('local-signup', {
+router.post('/register', passport.authenticate('local-signup', {
 	successRedirect : '/profile', // redirect to the secure profile section
 	failureRedirect : '/register', // redirect back to the signup page if there is an error
 	failureFlash : true // allow flash messages
