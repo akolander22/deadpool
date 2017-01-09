@@ -8,5 +8,6 @@ angular.module('deadApp').controller('RegisterController', function($http){
 
     console.log('clicked');
 
+
   }
 })
